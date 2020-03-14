@@ -83,7 +83,8 @@ skills <- tribble(
   "Bash",               4,
   "Excel",              4,
   "Hive",               4.5,
-  "Spark",              4
+  "Spark",              4,
+  "AWS",                3.5
 )
 
 build_skill_bars(skills)

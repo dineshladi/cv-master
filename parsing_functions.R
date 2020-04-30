@@ -34,7 +34,7 @@ sanitize_links <- function(text){
 
 # Take entire positions dataframe and removes the links 
 # in descending order so links for the same position are
-# right next to eachother in number. 
+# right next to each other in number. 
 strip_links_from_cols <- function(data, cols_to_strip){
   for(i in 1:nrow(data)){
     for(col in cols_to_strip){

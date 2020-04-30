@@ -55,7 +55,7 @@ Aside
 if(PDF_EXPORT){
   cat("View this CV online with links at _nickstrayer.me/cv_")
 } else {
-  cat("[<i class='fas fa-download'></i> Download a PDF of this CV](https://github.com/nstrayer/cv/raw/master/strayer_cv.pdf)")
+  cat("[<i class='fas fa-download'></i> Download a PDF of this CV](https://github.com/dineshladi/cv-master/blob/master/DineshLadi_Resume.pdf)")
 }
 ```
 
@@ -77,14 +77,14 @@ Skills/Tools {#skills}
 ```{r}
 skills <- tribble(
   ~skill,               ~level,
-  "R",                  5,
+  "R",                  4.5,
   "SQL",                5,
   "Python",             4.5,
-  "Bash",               4,
+  "Bash",               3.5,
   "Excel",              4,
-  "Hive",               4.5,
-  "Spark",              4,
-  "AWS",                3.5
+  "Hive",               3.5,
+  "Spark",              3,
+  "AWS",                3
 )
 
 build_skill_bars(skills)
@@ -95,7 +95,7 @@ Courses {#courses}
 --------------------------------------------------------------------------------
 
 ```{r}
-courses <- data.frame(course = c("Statistical Learning (Stanford)", "Deep Learning and Neural Networks (deeplearning.ai)", "Data Scientist Track (Dataquest.io)", "Introduction to Corporate Finance"), stringsAsFactors = F) %>% glue::glue_data("<li>{course}</li>")
+courses <- data.frame(course = c("Statistical Learning (Stanford)", "Deep Learning Specialization (deeplearning.ai)", "Data Scientist Track (Dataquest.io)", "Introduction to Corporate Finance"), stringsAsFactors = F) %>% glue::glue_data("<li>{course}</li>")
 
 glue::glue("<ul>",glue::glue_collapse(courses,sep = "\n<br>"),"</ul>")
 
@@ -108,9 +108,9 @@ Dinesh Ladi {#title}
 --------------------------------------------------------------------------------
 
 ```{r eval=TRUE}
-intro_text <- "I have more than 3 years experience in data analyses, machine learning and data visualization. Conceptualized and built a data tool within a span of 3 months and sold it to one of the unicorns in the country. 
+intro_text <- "I have almost 4 years experience in data analyses, machine learning and data visualization. Conceptualized and built a data tool within a span of 4 months and sold it to one of the unicorns in the country. 
 
-Currently looking for a data science role where I can build data driven tools using machine learning, data analyses and data visualization to help companies/people leverage the data"
+Currently looking for a data science role where I can build data driven tools using machine learning, data analyses and data visualization to help companies/people leverage data"
 
 cat(sanitize_links(intro_text))
 ```

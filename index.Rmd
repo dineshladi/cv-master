@@ -83,7 +83,7 @@ skills <- tribble(
   "Bash",               3.5,
   "Excel",              4,
   "Hive",               3.5,
-  "Spark",              3,
+  "PySpark",              3,
   "AWS",                3
 )
 

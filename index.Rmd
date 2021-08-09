@@ -17,6 +17,10 @@ knitr::opts_chunk$set(
 
 library(glue)
 library(tidyverse)
+library(dplyr, warn.conflicts = FALSE)
+
+# Suppress summarise info
+options(dplyr.summarise.inform = FALSE)
 
 # Set this to true to have links turned into footnotes at the end of the document
 PDF_EXPORT <- FALSE
@@ -82,9 +86,8 @@ skills <- tribble(
   "Python",             4.5,
   "Bash",               3.5,
   "Excel",              4,
-  "Hive",               3.5,
-  "PySpark",              3,
-  "AWS",                3
+  "PySpark",              4,
+  "Azure",                4
 )
 
 build_skill_bars(skills)
@@ -108,11 +111,18 @@ Dinesh Ladi {#title}
 --------------------------------------------------------------------------------
 
 ```{r eval=TRUE}
-intro_text <- "I have almost 4 years experience in data analyses, machine learning and data visualization. Conceptualized and built a data tool within a span of 4 months and sold it to one of the unicorns in the country. 
+intro_text <- "I have 5 years of experience in data analyses, machine learning, NLP and data visualization. Conceptualized and built a data tool within a span of 4 months and sold it to one of the unicorns in the country. Spoke at DataBricks and Seoul AI Summits. 
 
-Currently looking for a data science role where I can build data driven tools using machine learning, data analyses and data visualization to help companies/people leverage data"
+Currently looking for a data science role where I can help companies/people leverage data to make better decisions using data analyses, machine learning and data visualization"
 
 cat(sanitize_links(intro_text))
+```
+
+Conferences {data-icon=chalkboard-teacher}
+--------------------------------------------------------------------------------
+
+```{r}
+print_section(position_data, 'conference')
 ```
 
 Industry Experience {data-icon=suitcase}
@@ -130,8 +140,6 @@ Education {data-icon=graduation-cap data-concise=true}
 print_section(position_data, 'education')
 ```
 
-<br>
-<br>
 <br>
 
 ```{r}
